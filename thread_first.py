@@ -9,7 +9,12 @@ compose_two = lambda f, g: lambda *args, **kwargs: f(g(*args, **kwargs))
 
 compose = lambda *funcs: reduce(compose_two, reversed(funcs))
 
-class
+class Apply:
+    pass
+
+def count_apply(*args):
+    pass
+
 
 def thread_first(val, *forms):
     def fun(val, form):
@@ -32,4 +37,6 @@ print(composed(2))
 print(thread_first(2,
                     (inc, 2),
                     (mul, 1)))
+print(Apply is Apply)
+print(callable(Apply))
 
